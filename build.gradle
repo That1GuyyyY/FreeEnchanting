@@ -3,17 +3,15 @@ plugins {
 }
 
 group = 'me.that1guyyyy'
-version = '1.0'
+version = '1.1.0'
 
 repositories {
     mavenCentral()
-    // This connects to the repository storing Paper data
-    maven { url = 'https://repo.papermc.io/repository/maven-public/' } 
+    maven { url = 'https://papermc.io' } 
 }
 
 dependencies {
-    // Fixed version format for the 1.21.11 API engine
-    compileOnly 'io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT'
+    compileOnly 'io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT' 
 }
 
 java {
@@ -25,3 +23,4 @@ java {
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 }
+
