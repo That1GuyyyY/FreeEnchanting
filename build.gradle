@@ -7,13 +7,15 @@ version = '1.1.0'
 
 repositories {
     mavenCentral()
-    // This points directly to Paper's official maven server
-    maven { url = 'https://papermc.io' } 
+    maven {
+        name = 'papermc'
+        url = 'https://repo.papermc.io/repository/maven-public/'
+    }
 }
 
 dependencies {
-    // This is the correct library name Paper uses to compile for all 1.21 patches
-    compileOnly 'io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT' 
+    // Universal developer library that covers 1.21.11 server compatibility
+    compileOnly 'io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT'
 }
 
 java {
